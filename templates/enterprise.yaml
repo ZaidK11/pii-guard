@@ -1,0 +1,23 @@
+# pii-guard — Enterprise / Fintech Template
+# Use for compliance agents, KYC/AML workflows, internal business tools.
+# Covers standard PII + financial identifiers (account numbers, IBANs, routing numbers).
+
+template: enterprise
+
+# Keep regulatory terms visible to the LLM (they need them for compliance reasoning)
+custom_rules:
+  - name: keep_regulatory
+    pattern: "(OFAC|FinCEN|SAR|AML|KYC|KYB|CTR|BSA)"
+    redact: false
+
+# Add your company-specific terms:
+# custom_rules:
+#   - name: company_name
+#     pattern: "Acme Corp"
+#     label: COMPANY
+#   - name: internal_project
+#     pattern: "ProjectX"
+#     label: PROJECT
+#   - name: partner_names
+#     pattern: "(Visa|Mastercard|PartnerBank)"
+#     label: PARTNER

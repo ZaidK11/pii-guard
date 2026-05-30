@@ -1,0 +1,16 @@
+# pii-guard — Personal Agent Template
+# Use this for individual developers, personal assistants, hobby projects.
+# Covers standard PII an individual might share with an AI agent.
+
+template: personal
+
+# Optionally disable specific built-in patterns:
+# disable_builtins:
+#   - us_zip      # if you're sending location context
+#   - dob         # if you're sending date ranges
+
+# Add your own terms/patterns:
+# custom_rules:
+#   - name: my_project
+#     pattern: "ProjectNova"
+#     label: PROJECT

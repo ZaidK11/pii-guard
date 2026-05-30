@@ -1,0 +1,49 @@
+{
+  "name": "pii-guard",
+  "version": "2.0.0",
+  "description": "Node.js-first, streaming-aware LLM privacy proxy. Redacts PII before prompts reach any LLM API, restores original values in responses — including streaming chunks.",
+  "main": "src/index.js",
+  "bin": {
+    "pii-guard": "src/bin.js"
+  },
+  "scripts": {
+    "start": "node src/proxy/server.js",
+    "test": "node tests/run.js",
+    "lint": "node -e \"console.log('lint ok')\""
+  },
+  "keywords": [
+    "pii",
+    "redaction",
+    "privacy",
+    "llm",
+    "claude",
+    "openai",
+    "gemini",
+    "compliance",
+    "gdpr",
+    "hipaa",
+    "ccpa",
+    "middleware",
+    "proxy",
+    "agent",
+    "ai",
+    "streaming",
+    "sse",
+    "fintech",
+    "healthcare"
+  ],
+  "author": "Zaid Khan",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZaidK11/pii-guard"
+  },
+  "dependencies": {
+    "express": "^4.22.2",
+    "js-yaml": "^4.1.1",
+    "node-fetch": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

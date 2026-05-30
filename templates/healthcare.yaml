@@ -1,0 +1,23 @@
+# pii-guard — Healthcare / HIPAA Template
+# Covers all 18 HIPAA PHI identifier categories (as patterns allow).
+# Use for clinical decision support, EHR integrations, patient portals.
+
+template: healthcare
+
+custom_rules:
+  # Custom medical codes (extend as needed)
+  - name: diagnosis_code
+    source: "\\b[A-Z]\\d{2}\\.\\d{1,4}\\b"
+    flags: g
+    label: ICD_CODE
+    # Note: Redacting ICD codes may reduce LLM reasoning quality for clinical use.
+    # Set redact: false if the LLM needs diagnosis context.
+
+  # Physician NPI and DEA numbers are covered by built-ins.
+  # Add facility-specific identifiers here:
+  # - name: facility_id
+  #   source: "FAC-\\d{6}"
+  #   label: FACILITY_ID
+
+# HIPAA note: This template handles text-based PHI.
+# For voice, image, or structured data (HL7/FHIR), additional processing is required.

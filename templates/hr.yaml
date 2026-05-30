@@ -1,0 +1,14 @@
+# pii-guard — HR / Payroll Template
+# Use for HR agents, payroll assistants, employee onboarding workflows.
+# Covers employee PII, salary data, health plan references.
+
+template: hr
+
+custom_rules:
+  # Add your org's specific fields
+  # - name: employee_badge
+  #   source: "EMP-\\d{5}"
+  #   label: BADGE_ID
+  # - name: health_plan
+  #   source: "\\b(BlueCross|Aetna|UnitedHealth|Cigna)\\b"
+  #   label: HEALTH_PLAN
